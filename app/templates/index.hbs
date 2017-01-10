@@ -11,7 +11,7 @@
   <p>Here is a list of our properties for rent!</p> <br>
   <ul>
     {{#each model as |rental|}}
-      {{rental-tile rental=rental update="update" destroyRental="destroyRental"}} <!-- rendering component on left and from template on right-->
+    {{rental-tile rental=rental}} <!-- rendering component on left and from template on right-->
     {{/each}}
   </ul><br><hr>
 

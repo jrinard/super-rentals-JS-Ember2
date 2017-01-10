@@ -1,0 +1,16 @@
+<div class="well">
+
+  <div class="nav"><hr>
+    {{#link-to 'index'}}Home{{/link-to}} |
+    {{#link-to 'about'}}About{{/link-to}} |
+    {{#link-to 'contact'}}Contact{{/link-to}} |
+    {{#link-to 'announcement'}}News{{/link-to}}
+  </div><hr>
+
+  <h2>Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is
+  available by arrangement through {{rental.owner}}.</h2>
+  <br>
+  <p><img class="img-size well" src={{rental.image}} alt={{rental.type}}></p>
+
+  <button class="btn btn-primary"{{action 'delete' rental}}>Delete</button>
+</div>
