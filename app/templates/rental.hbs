@@ -1,7 +1,9 @@
 <div class="container">
   <h2>More information about {{model.owner}}'s {{model.type}}:</h2>
 
+  <!-- update routing and button -->
   {{update-rental rental=model update="update"}}
 
+  <!-- pulling in rental-detail from component -->
   {{rental-detail rental=model destroyRental="destroyRental"}}
 </div>
