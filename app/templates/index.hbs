@@ -9,12 +9,16 @@
   </div><hr>
 
   <p>Here is a list of our properties for rent!</p> <br>
+
+  <!-- loop of your rentals -->
   <ul>
     {{#each model as |rental|}}
+    <!-- loads rental tile -->
     {{rental-tile rental=rental}} <!-- rendering component on left and from template on right-->
     {{/each}}
   </ul><br><hr>
 
+  <!-- save new rental -->
   {{new-rental saveRental2="saveRental3"}}
 
 

@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('rental', params.rental_id);// two arguments routing the id
   },
-  actions: {
+  actions: {    // allows update from rental page
     update(rental, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       });
       rental.save();
       this.transitionTo('index');
-    },
+    }, // allows destroy from home page
     destroyRental(rental) {
       rental.destroyRecord();
       this.transitionTo('index');
